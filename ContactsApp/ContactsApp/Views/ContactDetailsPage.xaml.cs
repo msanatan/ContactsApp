@@ -53,7 +53,7 @@ namespace ContactsApp.Views
             Model.PhotoUrl = "ContactsApp.Images.anonymous.png";
             db.SaveContact(Model);
 
-            Navigation.PushAsync(new Views.ContactsPage());
+			Navigation.PopAsync ();
         }
 
         public async void OnDelete(object sender, EventArgs e)
@@ -64,13 +64,13 @@ namespace ContactsApp.Views
             if (answer)
             {
                 db.DeleteContact(Model.Id);
-                await Navigation.PushAsync(new Views.ContactsPage());
+				await Navigation.PopAsync ();
             }
         }
 
         public async void OnCancel(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Views.ContactsPage());
+			await Navigation.PopAsync ();
         }
 
         public bool IsFormValid()
