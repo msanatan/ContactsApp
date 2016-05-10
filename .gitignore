@@ -210,3 +210,12 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+
+# OS X ignores
+.DS_Store
+
+# Automatically generate file for Android
+Resource.designer.cs
+
+# Extra Xamarin stuff to ignore
+Components
